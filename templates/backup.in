@@ -14,7 +14,7 @@ test -d $BACKUPDIR || mkdir -p $BACKUPDIR
 # first dump entire postgres database, including pg_shadow etc.
 $DUMPALL  | $BZIP2 > "$BACKUPDIR/db.out.bz2"
 # next dump globals (roles and tablespaces) only
-$DUMPALL -g | $BZIP2 > "$BACKUPDIR/globals.gz"
+$DUMPALL -g | $BZIP2 > "$BACKUPDIR/globals.bz2"
 
 # get list of databases in system , exclude the tempate dbs
 DBS=`$PSQL -l | awk '{ print $1}' | grep '^[a-z]' | grep -v template | grep -v postgres`
