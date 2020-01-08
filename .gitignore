@@ -1,0 +1,6 @@
+.installed.cfg
+buildout.cfg
+parts/
+bin/
+var/
+etc/
