@@ -4,3 +4,7 @@ parts/
 bin/
 var/
 etc/
+.Python
+include/
+lib/
+pyvenv.cfg
